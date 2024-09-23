@@ -63,11 +63,11 @@ function playRound(humanChoice, computerChoice) {
     
     }
   
-  }
+  
   if (humanScore > computerScore) {
     console.log("you won!")
   }
   else if (computerScore > humanScore) {
     console.log("you lose")
-  }
+  }}
   playGame()
