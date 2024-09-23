@@ -12,11 +12,10 @@ function getHumanChoice() {
     
     
 }
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-
 let humanScore = 0;
-let computerScore = 0;
+    let computerScore = 0;
+
+
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
@@ -48,5 +47,30 @@ function playRound(humanChoice, computerChoice) {
   const humanSelection = getHumanChoice();
   const computerSelection = getComputerChoice();
   
-  playRound(humanSelection, computerSelection);
+
+  function playGame(){
+   
+    let humanScore = 0;
+    let computerScore = 0;
+    // make it run for 5 rounds
+    for (let i = 0; i < 5; i++) {
+    
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    console.log(`Round ${i+1}`);
+    console.log(`human score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+
+    
+    }
   
+  }
+  if (humanScore > computerScore) {
+    console.log("you won!")
+  }
+  else if (computerScore > humanScore) {
+    console.log("you lose")
+  }
+  playGame()
